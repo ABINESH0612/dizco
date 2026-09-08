@@ -1,0 +1,74 @@
+<h1>Your DIZCO Invoice</h1>
+<p>Dear <span class="accent">{{full_name}}</span>, here is your tax invoice for order <span class="accent">{{order_number}}</span>.</p>
+
+<hr class="divider" />
+
+<table class="data-table">
+  <tr>
+    <td class="label">Invoice No.</td>
+    <td class="value accent">INV-{{order_number}}</td>
+  </tr>
+  <tr>
+    <td class="label">Invoice Date</td>
+    <td class="value">{{order_date}}</td>
+  </tr>
+  <tr>
+    <td class="label">Order Reference</td>
+    <td class="value">{{order_number}}</td>
+  </tr>
+  <tr>
+    <td class="label">Payment</td>
+    <td class="value"><span class="badge">{{payment_status}}</span></td>
+  </tr>
+</table>
+
+<hr class="divider" />
+
+<h2>Billed To</h2>
+<p style="color:#b0b0b0; line-height:1.9;">
+  {{full_name}}<br/>
+  {{email}}<br/>
+  {{shipping_address}}
+</p>
+
+<hr class="divider" />
+
+<h2>Items</h2>
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Qty</th>
+      <th style="text-align:right;">Unit Price</th>
+      <th style="text-align:right;">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{invoice_items_rows}}
+  </tbody>
+</table>
+
+<hr class="divider" />
+
+<table class="data-table">
+  <tr>
+    <td class="label">Subtotal</td>
+    <td class="amount">{{subtotal}}</td>
+  </tr>
+  {{discount_row}}
+  <tr>
+    <td class="label">Shipping</td>
+    <td class="amount">{{shipping}}</td>
+  </tr>
+  <tr class="total-row">
+    <td class="label">Amount Due</td>
+    <td class="amount">{{total}}</td>
+  </tr>
+</table>
+
+<hr class="divider" />
+
+<p style="font-size:12px; color:#555555; text-align:center;">
+  This is a computer-generated invoice and does not require a signature.<br/>
+  DIZCO Contemporary Fashion &mdash; <a href="{{frontend_url}}" style="color:#888888;">{{frontend_url}}</a>
+</p>

@@ -1,0 +1,69 @@
+<h1>Order Confirmed</h1>
+<p>Thank you, <span class="accent">{{full_name}}</span>. Your order has been received and is being processed.</p>
+
+<hr class="divider" />
+
+<table class="data-table">
+  <tr>
+    <td class="label">Order Reference</td>
+    <td class="value accent">{{order_number}}</td>
+  </tr>
+  <tr>
+    <td class="label">Order Date</td>
+    <td class="value">{{order_date}}</td>
+  </tr>
+  <tr>
+    <td class="label">Payment Status</td>
+    <td class="value"><span class="badge">{{payment_status}}</span></td>
+  </tr>
+</table>
+
+<hr class="divider" />
+
+<h2>Items Ordered</h2>
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Qty</th>
+      <th style="text-align:right;">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{items_rows}}
+  </tbody>
+</table>
+
+<hr class="divider" />
+
+<h2>Order Summary</h2>
+<table class="data-table">
+  <tr>
+    <td class="label">Subtotal</td>
+    <td class="amount">{{subtotal}}</td>
+  </tr>
+  {{discount_row}}
+  <tr>
+    <td class="label">Shipping</td>
+    <td class="amount">{{shipping}}</td>
+  </tr>
+  <tr class="total-row">
+    <td class="label">Total</td>
+    <td class="amount">{{total}}</td>
+  </tr>
+</table>
+
+<hr class="divider" />
+
+<h2>Shipping Address</h2>
+<p style="color:#b0b0b0; line-height:1.9;">{{shipping_address}}</p>
+
+<hr class="divider" />
+
+<p style="text-align:center; margin: 28px 0;">
+  <a href="{{orders_url}}" class="btn">View My Orders</a>
+</p>
+
+<p style="font-size:13px; color:#666666;">
+  If you have any questions about your order, reply to this email or visit your account dashboard.
+</p>

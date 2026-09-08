@@ -1,0 +1,79 @@
+# ─── Secrets — NEVER commit these ──────────────────────────────
+.env
+*.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+# Allow example files to be committed
+!.env.example
+
+# ─── Python ─────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ─── Virtual environments ────────────────────────────────────────
+venv/
+venv312/
+env/
+.venv/
+ENV/
+
+# ─── Database (local development only) ──────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ─── Uploads (user-generated media) ─────────────────────────────
+server/uploads/
+
+# ─── Node / Frontend ─────────────────────────────────────────────
+node_modules/
+client/dist/
+client/dist-ssr/
+client/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Test / Coverage artefacts ───────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# ─── IDE / OS ─────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── Logs ─────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ─── Extracted assets / design files ──────────────────────────────
+extracted_assets/
+design_extracted.txt
+prd_extracted.txt
